@@ -29,25 +29,25 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 // TODO: Implement asset caching
 
 // added css / javascript asset caching
-registerRoute(
-  ({ request }) => {
-    console.log(request);
-    return (
-      // CSS
-      request.destination === 'style' ||
-      // JavaScript
-      request.destination === 'script'
-    );
-  },
-  new StaleWhileRevalidate({
-    cacheName: 'static-resources',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-    ],
-  })
-);
+// registerRoute(
+//   ({ request }) => {
+//     console.log(request);
+//     return (
+//       // CSS
+//       request.destination === 'style' ||
+//       // JavaScript
+//       request.destination === 'script'
+//     );
+//   },
+//   new StaleWhileRevalidate({
+//     cacheName: 'static-resources',
+//     plugins: [
+//       new CacheableResponsePlugin({
+//         statuses: [0, 200],
+//       }),
+//     ],
+//   })
+// );
 
 // added image caching
 registerRoute(

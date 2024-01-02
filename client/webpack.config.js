@@ -20,6 +20,7 @@ module.exports = () => {
     plugins: [
       // added HtmlWebpackPlugin
       new HtmlWebpackPlugin({
+        publicPath: './',
         template: './index.html',
         title: 'Just Another Text Editor'
       }), 
@@ -30,7 +31,6 @@ module.exports = () => {
         description: 'Takes notes with JavaScript syntax highlighting!',
         theme_color: '#225ca3',
         background_color: '#225ca3',
-        crossorigin: 'use-credentials',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -40,8 +40,8 @@ module.exports = () => {
       }),
       // added inject manifest
       new InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'service-worker.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }),
     ],
 
