@@ -22,6 +22,24 @@ module.exports = () => {
         template: './index.html',
         title: 'Just Another Text Editor'
       }), 
+      new WebpackPwaManifest({
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E.',
+        description: 'Takes notes with JavaScript syntax highlighting!',
+        theme_color: '#225ca3',
+        background_color: '#225ca3',
+        crossorigin: 'use-credentials',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512]
+          },
+        ]
+      }),
+      new InjectManifest({
+        swSrc: './src/sw.js',
+        swDest: 'service-worker.js',
+      }),
     ],
 
     module: {
