@@ -11,3 +11,4 @@ idea/
 *-lock.json
 .DS_Store
 /logs/
+dist
