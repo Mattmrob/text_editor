@@ -18,10 +18,12 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      // added HtmlWebpackPlugin
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'Just Another Text Editor'
       }), 
+      // Added webpack pwa manifest
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E.',
@@ -36,6 +38,7 @@ module.exports = () => {
           },
         ]
       }),
+      // added inject manifest
       new InjectManifest({
         swSrc: './src/sw.js',
         swDest: 'service-worker.js',
@@ -44,10 +47,12 @@ module.exports = () => {
 
     module: {
       rules: [
+        // added css loaders
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
+        // added babbel loaders
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
