@@ -20,18 +20,19 @@ module.exports = () => {
     plugins: [
       // added HtmlWebpackPlugin
       new HtmlWebpackPlugin({
-        publicPath: './',
+        publicPath: '',
         template: './index.html',
         title: 'Just Another Text Editor'
       }), 
       // Added webpack pwa manifest
       new WebpackPwaManifest({
-        publicPath: './',
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E.',
         description: 'Takes notes with JavaScript syntax highlighting!',
         theme_color: '#225ca3',
         background_color: '#225ca3',
+        publicPath: './',
+        start_url: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -43,7 +44,7 @@ module.exports = () => {
       // added inject manifest
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: 'service-worker.js',
       }),
     ],
 
