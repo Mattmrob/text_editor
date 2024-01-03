@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       // added HtmlWebpackPlugin
       new HtmlWebpackPlugin({
-        publicPath: '',
+        publicPath: './',
         template: './index.html',
         title: 'Just Another Text Editor'
       }), 
