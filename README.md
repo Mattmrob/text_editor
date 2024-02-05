@@ -9,18 +9,22 @@ J.A.T.E. is just another text editor that runs as a Progressive Web Application 
 <a href="#description">Description</a> <br>
 <a href="#usage">Usage</a> <br>
 <a href="#installation">Installation</a> <br>
+<a href="#bugs">Known Bugs</a> <br>
 <a href="#license">License</a> <br>
 <a href="#credits">Credits</a> <br>
 
 ## <a id="usage"></a>Usage
 To use the app, access it at the deployed link:
 
-to be added
+https://text-editor-1k74.onrender.com/
 
 Once you have accessed the app, you will be able to enter text onto the page. Any information you type into the text editor will be saved locally and persist. If you do not have an internet connection, you will still be able to access the app assuming you visited the deployed link at least once before, as the app uses a service worker to cache its information to your browser.
 
 ## <a id="installation"></a>Installation
 If you would like, you may click the 'install' button to install the app directly onto your device, of which, it can be accessed by searching 'J.A.T.E.' on your device and clicking the app. 
+
+## <a id="bugs"></a>Known Bugs
+App does not properly install when the installation button is clicked.
 
 ## <a id="license"></a>License
 N/A

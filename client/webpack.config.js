@@ -28,8 +28,8 @@ module.exports = () => {
         description: 'Takes notes with JavaScript syntax highlighting!',
         theme_color: '#225ca3',
         background_color: '#225ca3',
-        publicPath: './',
-        start_url: './',
+        publicPath: '/',
+        start_url: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
